@@ -33,7 +33,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/logout" exact component={Logout} />
-
+          {/* <Route path="/" exact component={Home} /> */}
           <Route
             path="/"
             exact

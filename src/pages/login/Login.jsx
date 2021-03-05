@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaTwitter, FaFacebook } from "react-icons/fa";
 import fetchAuth from "../../client/fetchAuth";
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-
+  const history = useHistory();
   const handleChange = (e) =>
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
 
@@ -24,9 +25,13 @@ export default function Login() {
 
       if (res.statusText === "OK") window.location.replace("/");
       setLoading(false);
+      // if (res.statusText === "OK") {
+      //   history.push("/");
+      //   setLoading(false);
+      // }
     } catch (error) {
       setLoading(false);
-      setError(error.message);
+      setError(error.response.data.message);
     }
   };
   const url = process.env.REACT_APP_API_URL + "/users";
