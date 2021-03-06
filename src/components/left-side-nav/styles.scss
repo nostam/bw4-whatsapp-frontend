@@ -12,31 +12,59 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    height: 60px;
+    padding-left: 1rem;
     border-right: 1px solid rgba(252, 252, 252, 0.205);
-
-    svg {
-      margin: 15px;
+  }
+  .left-menu-searchbox {
+    padding: 2px 0;
+    border-bottom: 1px solid #323739;
+    .searchbox-wrapper {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin: 4px 8px;
+      border-radius: 1.25rem;
+      width: 300px;
+      background-color: #323739;
+      color: white;
+      border: none;
+      height: 35px;
+      position: relative;
+      align-items: center;
+      input[type="text"],
+      input[type="text"]:focus-visible {
+        border: none;
+        outline: none;
+        width: 220px;
+        color: white;
+      }
     }
   }
-
   #search {
-    position: relative;
-    margin: 5px 10px 5px 0px;
-    border-radius: 15px;
-    width: 300px;
-    background-color: #323739;
+    position: absolute;
+    background: transparent;
     color: white;
-    padding-left: 40px;
-    border: none;
-    height: 35px;
+    left: 60px;
+  }
+  #search-icon {
+    left: 15px;
+    z-index: 10;
+    position: absolute;
   }
 
-  #search-icon {
-    top: 15px;
-    left: 35px;
-    z-index: 10;
+  .rce-citem {
+    background-color: #131c21;
 
-    position: relative;
+    .rce-citem-body--top-time {
+      color: aliceblue;
+    }
+    .rce-citem-body--top,
+    .rce-citem-body--bottom {
+      text-align: left;
+    }
+  }
+  .rce-citem:hover {
+    background-color: #2a2f32;
   }
 }

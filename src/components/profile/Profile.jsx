@@ -4,11 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { ProfileImg } from "..";
 import { useSelector } from "react-redux";
-// import List from "@material-ui/core/List";
-// import Divider from "@material-ui/core/Divider";
-// import ListItem from "@material-ui/core/ListItem";
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
-// import ListItemText from "@material-ui/core/ListItemText";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import "./profile.scss";
 
@@ -21,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Profile() {
+export default function Profile({ inComp = "Profile" }) {
   const classes = useStyles();
   const [state, setState] = React.useState(false);
 
@@ -41,7 +36,7 @@ export default function Profile() {
   return (
     <div>
       <>
-        <div onClick={toggleDrawer(true)}>Profile</div>
+        <div onClick={toggleDrawer(true)}>{inComp}</div>
         <Drawer
           anchstyle={{ display: "none" }}
           or={"left"}
@@ -61,7 +56,7 @@ export default function Profile() {
 
             <div id="img-profile">
               <ProfileImg
-                img_url={userInfos.avatar}
+                avatar={userInfos.avatar}
                 style={{ width: "170px", hieght: "250px", borderRadius: "50%" }}
               />
             </div>
@@ -77,7 +72,7 @@ export default function Profile() {
 
             <div>
               About
-              <h4>Hey there! I am using WhatsApp.</h4>
+              <h6>{userInfos.about}</h6>
             </div>
           </div>
         </Drawer>

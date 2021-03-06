@@ -5,12 +5,17 @@
 
   #proile-top {
     display: flex;
-    align-items: center;
-    justify-self: center;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
     background-color: #323739;
     color: rgb(204, 204, 204);
     height: 110px;
     margin-bottom: 20px;
+    h5 {
+      font-weight: 600;
+      color: white;
+    }
   }
 
   #img-profile {

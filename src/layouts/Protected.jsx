@@ -4,7 +4,6 @@ import { Spinner } from "react-bootstrap";
 
 const Protected = (props) => {
   const [userInfos, loading] = useAuth();
-  console.log(loading);
   return (
     <>
       {loading ? (

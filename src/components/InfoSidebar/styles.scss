@@ -1,0 +1,111 @@
+$mdGrey: "#2a2f32" !default;
+$mdDark: "#131c21";
+// $mdDark: "#333";
+$mdBlack: "#0c1317";
+$mdGreen: "#009688" !default;
+
+#infoSidebar {
+  background-color: $mdBlack;
+  // color: #eee;
+  // width: 420px;
+  // div {
+  //   background-color: $mdBlack;
+  // }
+  // .header {
+  //   background-color: $mdGrey;
+  // }
+  .info {
+    padding: 2rem;
+    color: #ccc;
+    background-color: #131c21;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    margin-top: 60px;
+    .sidebar-info {
+      margin: 1rem 0 0 0;
+      .sidebar-info-row1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 1rem;
+        align-items: center;
+      }
+      .sidebar-info-row2 {
+        text-align: left;
+        color: darkgray;
+        margin: 0 1rem;
+      }
+    }
+  }
+  .avatar {
+    img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .description,
+  .media,
+  .mute-notifications,
+  .star-messages,
+  .participants,
+  .contacts-info {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background-color: #131c21;
+  }
+  .description {
+    .description-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .star-messages,
+  .mute-notifications {
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .exit {
+    margin: 0.5rem 0;
+    padding: 1rem 3rem;
+    background-color: #131c21;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    span {
+      font-weight: 500;
+      margin-left: 2rem;
+      font-size: 1rem;
+      color: #ef697a;
+    }
+  }
+  p,
+  h6,
+  h5 {
+    text-align: left;
+  }
+  p,
+  h6 {
+    margin: 0 2rem;
+  }
+  p,
+  h5 {
+    color: #ccc;
+    font-weight: 500;
+  }
+  h6 {
+    color: #009688;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #infoSidebar {
+    width: calc(100vw - 330px);
+  }
+}
